@@ -46,16 +46,20 @@ public class Account {
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
-    public double getMonthlyInterestRate(){
-        double monthlyInterestRate = (annualInterestRate/100) / 12;
+
+    public double getMonthlyInterestRate() {
+        double monthlyInterestRate = (annualInterestRate / 100) / 12;
         return monthlyInterestRate;
     }
-    public double  getMonthlyInterest(){
-        return getMonthlyInterestRate()*balance;
+
+    public double getMonthlyInterest() {
+        return getMonthlyInterestRate() * balance;
     }
+
     public double withDraw(double withdrawalMoney) {
         return balance -= withdrawalMoney;
     }
+
     //để gửi vào tài khoản một số tiền
     public double depositMoney(double deposits) {
         return balance += deposits;
